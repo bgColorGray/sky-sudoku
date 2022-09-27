@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    tools:context=".window.puzzle.Puzzle">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/puzzle_top"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/puzzle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/puzzle_top_text"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:text="STAR - 3"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/timecount"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/pause"
+            app:layout_constraintStart_toEndOf="@+id/puzzle_top_text"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="100dp"
+            android:layout_height="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/timecount"
+            app:layout_constraintStart_toStartOf="@+id/timecount"
+            app:layout_constraintTop_toBottomOf="@+id/timecount" />
+
+        <ImageView
+            android:id="@+id/pause"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_play_pause" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.example.suduku.window.puzzle.PuzzleView
+        android:id="@+id/puzzle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/OperationPanel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/puzzle_top" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/OperationPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/puzzle">
+
+
+        <ImageView
+            android:id="@+id/operation06"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_play_numberbox_bg1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/operation06"
+            app:layout_constraintEnd_toEndOf="@+id/operation06"
+            app:layout_constraintStart_toStartOf="@+id/operation06"
+            app:layout_constraintTop_toTopOf="@+id/operation06" />
+
+        <ImageView
+            android:id="@+id/operation07"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/operation06"
+            app:layout_constraintStart_toEndOf="@+id/operation06"
+            app:srcCompat="@drawable/ic_play_numberbox_bg1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/operation07"
+            app:layout_constraintEnd_toEndOf="@+id/operation07"
+            app:layout_constraintStart_toStartOf="@+id/operation07"
+            app:layout_constraintTop_toTopOf="@+id/operation07" />
+
+        <ImageView
+            android:id="@+id/operation08"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/operation06"
+            app:layout_constraintStart_toEndOf="@+id/operation07"
+            app:srcCompat="@drawable/ic_play_numberbox_bg1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/operation08"
+            app:layout_constraintEnd_toEndOf="@+id/operation08"
+            app:layout_constraintStart_toStartOf="@+id/operation08"
+            app:layout_constraintTop_toTopOf="@+id/operation08" />
+
+        <ImageView
+            android:id="@+id/operation09"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/operation06"
+            app:layout_constraintStart_toEndOf="@+id/operation08"
+            app:srcCompat="@drawable/ic_play_numberbox_bg1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/operation09"
+            app:layout_constraintEnd_toEndOf="@+id/operation09"
+            app:layout_constraintStart_toStartOf="@+id/operation09"
+            app:layout_constraintTop_toTopOf="@+id/operation09" />
+
+        <ImageView
+            android:id="@+id/revoke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/operation06"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_play_numberbox_bg2" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/revoke"
+            app:layout_constraintEnd_toEndOf="@+id/revoke"
+            app:layout_constraintStart_toStartOf="@+id/revoke"
+            app:layout_constraintTop_toTopOf="@+id/revoke"
+            app:srcCompat="@drawable/ic_play_numberbox_revoke" />
+
+
+        <ImageView
+            android:id="@+id/operation01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/operation06"
+            app:layout_constraintStart_toStartOf="@+id/operation06"
+            app:srcCompat="@drawable/ic_play_numberbox_bg1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/operation01"
+            app:layout_constraintEnd_toEndOf="@+id/operation01"
+            app:layout_constraintStart_toStartOf="@+id/operation01"
+            app:layout_constraintTop_toTopOf="@+id/operation01" />
+
+        <ImageView
+            android:id="@+id/operation02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/operation06"
+            app:layout_constraintStart_toEndOf="@+id/operation01"
+            app:srcCompat="@drawable/ic_play_numberbox_bg1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/operation02"
+            app:layout_constraintEnd_toEndOf="@+id/operation02"
+            app:layout_constraintStart_toStartOf="@+id/operation02"
+            app:layout_constraintTop_toTopOf="@+id/operation02" />
+
+        <ImageView
+            android:id="@+id/operation03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/operation06"
+            app:layout_constraintStart_toEndOf="@+id/operation02"
+            app:srcCompat="@drawable/ic_play_numberbox_bg1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/operation03"
+            app:layout_constraintEnd_toEndOf="@+id/operation03"
+            app:layout_constraintStart_toStartOf="@+id/operation03"
+            app:layout_constraintTop_toTopOf="@+id/operation03" />
+
+
+        <ImageView
+            android:id="@+id/operation04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/operation06"
+            app:layout_constraintStart_toEndOf="@+id/operation03"
+            app:srcCompat="@drawable/ic_play_numberbox_bg1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/operation04"
+            app:layout_constraintEnd_toEndOf="@+id/operation04"
+            app:layout_constraintStart_toStartOf="@+id/operation04"
+            app:layout_constraintTop_toTopOf="@+id/operation04" />
+
+
+        <ImageView
+            android:id="@+id/operation05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/operation06"
+            app:layout_constraintStart_toEndOf="@+id/operation04"
+            app:srcCompat="@drawable/ic_play_numberbox_bg1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/operation05"
+            app:layout_constraintEnd_toEndOf="@+id/operation05"
+            app:layout_constraintStart_toStartOf="@+id/operation05"
+            app:layout_constraintTop_toTopOf="@+id/operation05" />
+
+        <ImageView
+            android:id="@+id/sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/operation06"
+            app:layout_constraintStart_toEndOf="@+id/operation05"
+            app:srcCompat="@drawable/ic_play_numberbox_bg1" />
+
+        <ImageView
+            android:id="@+id/signImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/sign"
+            app:layout_constraintEnd_toEndOf="@+id/sign"
+            app:layout_constraintStart_toStartOf="@+id/sign"
+            app:layout_constraintTop_toTopOf="@+id/sign"
+            app:srcCompat="@drawable/ic_play_numberbox_markoff" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
